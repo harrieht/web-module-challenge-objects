@@ -94,7 +94,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 
 reviews[7].feedback =  "this place is chill with really cool people, great for getting work done on weekdays";
 
-console.log('task4:',reviews);
+console.log('task 4:',reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -107,15 +107,14 @@ Use the addReview function below to do the following:
   🌟 EXAMPLE: addReview(reviews, 'Billy', 2, 'Lame food!') should add the following to the end of the array: {name: 'Billy', rating: 2, feedback: 'Lame food!'}
   4. Return the updated array
 */
-
-
-
-function addReview(array, name, rating, feedback){
-  return {name, rating, feedback};
+function addReview(array) {
+  const reviews = {
+    name: 'Billy',
+    rating: 2,
+    feedback: 'Lame food!'
+  }
 }
-
-
-
+console.log(addReview(reviews, 'Billy', 2, 'Lame food!'));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
@@ -127,11 +126,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(array, number,) {
+function getReviewByIndex(array, number) {
  return`${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
 }
 
-  console.log('task6:', getReviewByIndex(reviews, 4, ));
+  console.log('task6:', getReviewByIndex(reviews, 4));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
@@ -146,10 +145,10 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(array,) {
- return `${array[array.length -1].name} gave the restaurant a ${array.length -1]. rating} star review, and their feedback was: ${array[array.length -1].feedback}`;
-} 
-  console.log('task 7:', getLastReviews(reviews));
+ function getLastReview(array,) {
+ return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length -1].feedback}`;
+}
+  console.log('task 7:', getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -168,10 +167,11 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array, index, reviews, rating) {
+    array[index].reviews = rating;
+    return array;
   }
-
+console.log(getReviewByRating(reviews, 4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
