@@ -107,12 +107,9 @@ Use the addReview function below to do the following:
   🌟 EXAMPLE: addReview(reviews, 'Billy', 2, 'Lame food!') should add the following to the end of the array: {name: 'Billy', rating: 2, feedback: 'Lame food!'}
   4. Return the updated array
 */
-function addReview(array) {
-  const reviews = {
-    name: 'Billy',
-    rating: 2,
-    feedback: 'Lame food!'
-  }
+function addReview(array, name, rating, feedback) {
+  array.push({name, rating, feedback});
+  return array;
 }
 console.log(addReview(reviews, 'Billy', 2, 'Lame food!'));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
